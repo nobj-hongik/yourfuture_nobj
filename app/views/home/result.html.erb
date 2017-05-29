@@ -1,0 +1,24 @@
+<div class="container">
+<h1>결과입니다.</h1>
+<h2><%= @name %>의 미래입니다.</h2> <br>
+
+당신의 연봉은 <% @pay_result.each do |r| %>
+<strong><%= @pay_result[0] %></strong>원입니다.
+<% end %><br><br><br><br> 
+
+당신은 <% @baby_result.each do |r| %>
+<strong><%= @baby_result[0] %></strong>명의 자식을 가집니다.
+<% end %><br><br><br><br> 
+
+
+<% if @sex=="man" %>
+당신의 부인은<br>
+<%= image_tag "woman/#{rand(6)}.jpg" %><br><br><br>
+<% else %>
+당신의 남편은<br>
+<%= image_tag "man/#{rand(6)}.jpg" %><br><br><br>
+<% end %>
+
+
+
+</div>
